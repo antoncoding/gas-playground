@@ -5,20 +5,37 @@ import {DSTest} from "ds-test/test.sol";
 import {console} from "./utils/Console.sol";
 import {Vm} from "forge-std/Vm.sol";
 
-import {PlusPlus} from "../PlusPlus.sol";
+import {PlusPlusPrefix, PlusPlusPostfix} from "../PlusPlus.sol";
 
-contract PlusPlusTest is DSTest {
-    PlusPlus internal immutable pp;
+contract PlusPlusPrefixTest is DSTest {
+    PlusPlusPrefix internal immutable pre;
 
     constructor() {
-        pp = new PlusPlus();
+        pre = new PlusPlusPrefix();
     }
 
     function testIncreaseStorage() public {
-        pp.increaseStorage();
+        // pre.increaseStorage();
+        pre.increaseStorage();
     }
 
     function testIncreaseMemory() public view {
-        pp.increaseMemory();
+        pre.increaseMemory();
+    }
+}
+
+contract PlusPlusPostfixTest is DSTest {
+    PlusPlusPostfix internal immutable post;
+
+    constructor() {
+        post = new PlusPlusPostfix();
+    }
+
+    function testIncreaseStorage() public {
+        post.increaseStorage();
+    }
+
+    function testIncreaseMemory() public view {
+        post.increaseMemory();
     }
 }
