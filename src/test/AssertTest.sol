@@ -29,4 +29,8 @@ contract AssertGTTest is DSTest {
     function testCall() public view {
         kk.checkRevert1(1);
     }
+
+    function testCall2() public view {
+        kk.checkRevert1(2);
+    }
 }
