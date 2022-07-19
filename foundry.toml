@@ -1,4 +1,4 @@
 [default]
 optimizer = true
 optimizer_runs = 200
-gas_reports = ["MyContract", "MyContractFactory"]
+gas_reports = ["*"]
