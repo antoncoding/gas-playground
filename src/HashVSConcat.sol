@@ -2,8 +2,6 @@
 pragma solidity 0.8.10;
 
 contract IdHash {
-    uint256 public a = 0;
-
     function generateId(
         bool _a,
         uint64 _b,

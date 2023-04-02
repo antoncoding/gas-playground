@@ -15,8 +15,11 @@ contract IdHashTest is DSTest {
     }
 
     function testCall() public view {
+        uint256 gas = gasleft();
         h.generateId(true, 198374, 19280981376876123);
         h.generateId(false, 4882945209384, 29831309449852);
+        uint256 gas2 = gasleft();
+        console.log(gas - gas2);
     }
 
     function testCallFuzz(
@@ -36,8 +39,11 @@ contract IdConcatTest is DSTest {
     }
 
     function testCall() public view {
+        uint256 gas = gasleft();
         c.generateId(true, 198374, 19280981376876123);
         c.generateId(false, 4882945209384, 29831309449852);
+        uint256 gas2 = gasleft();
+        console.log(gas - gas2);
     }
 
     function testCallFuzz(
