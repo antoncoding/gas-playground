@@ -22,7 +22,11 @@ contract IdHashTest is DSTest {
         console.log(gas - gas2);
     }
 
-    function testCallFuzz(bool _a, uint64 _b, uint128 _c) public view {
+    function testCallFuzz(
+        bool _a,
+        uint64 _b,
+        uint128 _c
+    ) public view {
         h.generateId(_a, _b, _c);
     }
 }
@@ -42,7 +46,11 @@ contract IdConcatTest is DSTest {
         console.log(gas - gas2);
     }
 
-    function testCallFuzz(bool _a, uint64 _b, uint128 _c) public view {
+    function testCallFuzz(
+        bool _a,
+        uint64 _b,
+        uint128 _c
+    ) public view {
         c.generateId(_a, _b, _c);
     }
 }
