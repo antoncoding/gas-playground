@@ -20,9 +20,7 @@ contract Caller {
         try erc20.doSomething() {
             // If doSomething is successful, update the state
             finished = true;
-        } catch (
-            bytes memory /*reason*/
-        ) {
+        } catch (bytes memory) /*reason*/ {
             // if case of a failed transfer (ERC20 got frozen or something), we still want to update the state.
             // this should not happen under normal scenario.
         }

@@ -28,5 +28,4 @@ contract UpdateStructStorageTest is DSTest {
     function testUpdateStorageCost() public {
         c.updateStruct();
     }
-
 }

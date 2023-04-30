@@ -22,10 +22,7 @@ struct IncreasePositionRequest {
 contract GMXStorage {
     mapping(uint256 => IncreasePositionRequest) public increasePositionRequests;
 
-    function setIncreaseRequest(
-        uint256 key,
-        IncreasePositionRequest memory request
-    ) external {
+    function setIncreaseRequest(uint256 key, IncreasePositionRequest memory request) external {
         increasePositionRequests[key] = request;
     }
 }
@@ -37,14 +34,8 @@ contract TestStruct {
         gmx = GMXStorage(_gmx);
     }
 
-    function checkIncreaseIsNotEmptyAssembly(uint256 key)
-        external
-        returns (bool)
-    {
-        bytes memory data = abi.encodeWithSelector(
-            gmx.increasePositionRequests.selector,
-            key
-        );
+    function checkIncreaseIsNotEmptyAssembly(uint256 key) external returns (bool) {
+        bytes memory data = abi.encodeWithSelector(gmx.increasePositionRequests.selector, key);
 
         (bool success, bytes memory returndata) = address(gmx).call(data);
         require(success);
@@ -58,14 +49,8 @@ contract TestStruct {
         return account != address(0);
     }
 
-    function parseAccountAssembly(uint256 key)
-        external
-        returns (address account)
-    {
-        bytes memory data = abi.encodeWithSelector(
-            gmx.increasePositionRequests.selector,
-            key
-        );
+    function parseAccountAssembly(uint256 key) external returns (address account) {
+        bytes memory data = abi.encodeWithSelector(gmx.increasePositionRequests.selector, key);
 
         (bool success, bytes memory returndata) = address(gmx).call(data);
         require(success);
@@ -77,9 +62,7 @@ contract TestStruct {
 
     function checkIncreaseIsNotEmpty(uint256 key) external view returns (bool) {
         // parse account from the first 32 bytes of returned data
-        (address account, , , , , , , , , , , ) = gmx.increasePositionRequests(
-            key
-        );
+        (address account,,,,,,,,,,,) = gmx.increasePositionRequests(key);
         return account != address(0);
     }
 }
