@@ -15,6 +15,9 @@ contract UpdateStructMemoryTest is DSTest {
 
     function testUpdateStorageCost() public {
         c.updateStruct();
+        uint256 a = 1;
+        uint256 b = 1;
+        uint256 ss = a * b + 1000e18;
     }
 }
 
@@ -27,5 +30,8 @@ contract UpdateStructStorageTest is DSTest {
 
     function testUpdateStorageCost() public {
         c.updateStruct();
+        uint256 a = 1;
+        uint256 b = 1;
+        uint256 ss = a * b + 1000e18;
     }
 }
