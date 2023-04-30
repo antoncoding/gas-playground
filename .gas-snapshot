@@ -1,7 +1,7 @@
 AssertEQTest:testCall() (gas: 3188)
 AssertGTTest:testCall() (gas: 3194)
 FormulaLib:testCalculateFormula() (gas: 3787)
-FormulaNoLib:testCalculateFormula() (gas: 3615)
+FormulaNoLib:testCalculateFormula() (gas: 4599)
 IdConcatTest:testCall() (gas: 4572)
 IdConcatTest:testCallFuzz(bool,uint64,uint128) (runs: 256, μ: 3836, ~: 3836)
 IdHashTest:testCall() (gas: 4600)
