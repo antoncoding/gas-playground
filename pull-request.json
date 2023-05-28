@@ -1,0 +1,10 @@
+{
+  "pull_request": {
+    "head": {
+      "ref": "test-forge-diff"
+    },
+    "base": {
+      "ref": "master"
+    }
+  }
+}

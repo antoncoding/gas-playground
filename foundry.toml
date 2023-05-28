@@ -2,3 +2,4 @@
 optimizer = true
 optimizer_runs = 20000
 gas_reports = ["*"]
+solc-version = "0.8.17"
