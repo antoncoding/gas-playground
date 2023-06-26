@@ -38,7 +38,7 @@ contract ReadSructTest is DSTest {
             })
         );
 
-        // accountn 1: only account
+        // account 1: only account
         gmx.setIncreaseRequest(
             1,
             IncreasePositionRequest({
