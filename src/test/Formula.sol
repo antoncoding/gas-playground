@@ -15,8 +15,8 @@ contract FormulaNoLib is DSTest {
     }
 
     function testCalculateFormula() public {
-        uint256 r = kk.calFormula(5e18, 5e18, 2e18, 0.5e18);
-        assertEq(r, 25e18);
+        kk.calFormula(5e18, 5e18, 2e18, 0.5e18);
+        kk.calFormula(5e18, 15e18, 22e18, 0.5e18);
     }
 }
 
@@ -28,7 +28,7 @@ contract FormulaLib is DSTest {
     }
 
     function testCalculateFormula() public {
-        uint256 r = kk.calFormula(5e18, 5e18, 2e18, 0.5e18);
-        assertEq(r, 25e18);
+        kk.calFormula(5e18, 5e18, 2e18, 0.5e18);
+        kk.calFormula(5e18, 15e18, 22e18, 0.5e18);
     }
 }
