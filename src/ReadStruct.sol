@@ -37,9 +37,10 @@ contract TestStruct {
         gmx = GMXStorage(_gmx);
     }
 
-    function checkIncreaseIsNotEmptyAssembly(
-        uint256 key
-    ) external returns (bool) {
+    function checkIncreaseIsNotEmptyAssembly(uint256 key)
+        external
+        returns (bool)
+    {
         bytes memory data = abi.encodeWithSelector(
             gmx.increasePositionRequests.selector,
             key
@@ -57,9 +58,10 @@ contract TestStruct {
         return account != address(0);
     }
 
-    function parseAccountAssembly(
-        uint256 key
-    ) external returns (address account) {
+    function parseAccountAssembly(uint256 key)
+        external
+        returns (address account)
+    {
         bytes memory data = abi.encodeWithSelector(
             gmx.increasePositionRequests.selector,
             key
