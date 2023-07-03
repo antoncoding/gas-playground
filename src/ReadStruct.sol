@@ -45,8 +45,8 @@ contract TestStruct {
             key
         );
 
-        (, bytes memory returndata) = address(gmx).call(data);
-        // require(success);
+        (bool success, bytes memory returndata) = address(gmx).call(data);
+        require(success, "error message here");
 
         // parse account from the first 32 bytes of returned data
         // same as: (address account,,,,,,,,,,,,) = positionRouter.increasePositionRequests(pendingOrderKey);
